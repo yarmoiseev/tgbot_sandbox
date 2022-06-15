@@ -12,7 +12,7 @@ public class BotClass extends TelegramLongPollingBot {
     @Override
     public String getBotToken() {
         return "*****";
-    }
+    } // Bot token
 
     @Override
     public void onUpdateReceived(Update update) {
@@ -21,7 +21,7 @@ public class BotClass extends TelegramLongPollingBot {
 
             String command = update.getMessage().getText();
             SendMessage message = new SendMessage(); // Create a SendMessage object with mandatory fields
-            String out = "";
+            String out;
             if (command.equals("/myname")) {
                 out = update.getMessage().getFrom().getFirstName();
                 System.out.println(out);
@@ -50,4 +50,5 @@ public class BotClass extends TelegramLongPollingBot {
         }
 
     }
+
 }
